@@ -13,5 +13,10 @@ class TestCalc(unittest.TestCase):
         self.assertTrue(calc.is_positive(3))
 
 
+    def test_divide(self):
+        with self.assertRaises(ZeroDivisionError):
+            calc.divide(8, 0)
+
+
 if __name__ == "__main__":
     unittest.main()
