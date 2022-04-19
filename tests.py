@@ -22,10 +22,19 @@ class TestCalc(unittest.TestCase):
         self.assertEqual('abc'.upper(), 'ABC')
 
     def test_islower(self):
-        self.assertEqual('abc'.islower(), True)
+        self.assertTrue('abc'.islower())
 
     def test_count(self):
         self.assertEqual('abc'.count('a'), 1)
+
+    def test_split(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+
+
 
 
 
